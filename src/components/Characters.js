@@ -1,9 +1,11 @@
+import "../css/";
+
 export default function Characters() {
   return (
     <div>
-      <section>
+      <section class="characterCard">
         <article>
-          <h2>Character 1</h2>
+          <h2>Character Name</h2>
         </article>
       </section>
     </div>

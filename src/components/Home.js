@@ -3,7 +3,8 @@ import homepagePicture from "../images/homepagePicture.jpg";
 export default function Home() {
   return (
     <div>
-      <h1>Welcome to the Harry Potter API!</h1>
+      <h1>Harry Potter API</h1>
+      <p>Welcome to the Harry Potter API!</p>
       <img
         className="homeImage"
         src={homepagePicture}

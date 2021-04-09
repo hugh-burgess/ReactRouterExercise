@@ -1,5 +1,5 @@
 .App {
-  height: 100vh;
+  max-height: 100vh;
   place-items: center;
   color: #04b1c5;
   font-size: 2em;

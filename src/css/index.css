@@ -14,6 +14,7 @@ code {
 
 .Navigation {
   background-color: red;
+  width: 100vw;
   display: flex;
   padding: 0 10px;
 }
@@ -28,7 +29,6 @@ code {
 }
 
 .header {
-
   grid-column: width;
   grid-row: header;
 }
@@ -39,4 +39,5 @@ code {
 .footer {
   grid-column: width;
   grid-row: footer;
+  font-size: 14px;
 }
