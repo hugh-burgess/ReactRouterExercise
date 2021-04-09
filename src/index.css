@@ -28,7 +28,7 @@ code {
 }
 
 .header {
- 
+
   grid-column: width;
   grid-row: header;
 }
