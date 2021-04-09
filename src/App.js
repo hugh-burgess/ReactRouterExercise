@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navigation from "./components/Navigation";
 
 function App() {
@@ -9,6 +9,18 @@ function App() {
         <header>
           <Navigation />
         </header>
+        <main>
+          <Switch>
+            <Route path="/"></Route>
+
+            <Route path="/"></Route>
+
+            <Route path="/"></Route>
+
+            <Route path="/"></Route>
+          </Switch>
+        </main>
+        <footer></footer>
       </div>
     </Router>
   );
