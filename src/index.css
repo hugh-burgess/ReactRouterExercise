@@ -15,12 +15,29 @@ code {
 .Navigation {
   background-color: red;
   width: 100vw;
+height: 80px;
+ display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Navigation a {
   display: flex;
+  justify-content: space-between;
   padding: 0 10px;
 }
 
 .logoImage {
-  width: 80px;
+  width: 40px;
+  margin: 5px;
+align-self: center;
+}
+
+.navWrapper {
+  padding: 0 10px;
+  display: flex;
+  float: right;
+
 }
 
 .homeImage {
@@ -31,6 +48,7 @@ code {
 .header {
   grid-column: width;
   grid-row: header;
+ 
 }
 .main {
   grid-column: width;

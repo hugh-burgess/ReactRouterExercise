@@ -8,7 +8,7 @@ export default function Home() {
       <img
         className="homeImage"
         src={HomePagePic}
-        alt="Harry Potter Logo"
+        alt="Star Wars Logo"
       />
       <p>Deployed by Hugh during the neuefishe bootcamp.</p>
     </div>

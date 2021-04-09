@@ -1,8 +1,6 @@
 .App {
   max-height: 100vh;
   place-items: center;
-  color: #04b1c5;
-  font-size: 2em;
   display: grid;
   grid-template-rows: [header] 80px [main] auto [footer] 80px;
   grid-template-columns: [width] 100vw;
