@@ -1,23 +1,18 @@
 import { NavLink } from "react-router-dom";
+import logo from "../images/logo.png";
 
 export default function Navigation() {
   return (
     <nav className="Navigation">
-      <NavLink exact to="/">
-        Home
-      </NavLink>
-
-      <NavLink exact to="/about">
-        About
-      </NavLink>
-
-      <NavLink exact to="/hobbies">
-        Hobbies
-      </NavLink>
-
-      <NavLink exact to="/contact">
-        Contact
-      </NavLink>
+      <img className="logoImage" src={logo} alt="harry potter" />
+      <div className="navWrapper">
+        <NavLink exact to="/">
+          Home
+        </NavLink>
+        <NavLink exact to="/characters">
+          Characters
+        </NavLink>
+      </div>
     </nav>
   );
 }
