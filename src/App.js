@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navigation from "./components/Navigation";
 import Home from "./components/Home";
 import Characters from "./components/Characters";
+import SingleCharacter from "./components/SingleCharacter";
 
 function App() {
   return (
@@ -17,6 +18,10 @@ function App() {
           <Switch>
             <Route path="/characters">
               <Characters />
+            </Route>
+
+            <Route path="/characters/:characterLink">
+              <SingleCharacter />
             </Route>
 
             <Route exact path="/">
