@@ -1,3 +1,9 @@
+.characterList {
+  display:flex;
+  flex-wrap: wrap;
+
+}
+
 .characterCard {
   border: black 1px solid;
   display: flex;
@@ -5,22 +11,26 @@
   padding: 10px;
   align-items: center;
   text-align: center;
-  height: 200px;
+  height: auto;
   width: 170px;
   border-radius: 15px;
+  margin: 10px
 }
 
 .characterPicture {
   border: green;
-  height: 150px;
-  width: 150px;
+
+  width: 100%;
   border-radius: 15px;
 }
 
 .characterNameTitle {
-  margin: 0;
+  margin: 10px 0;
+  font-size: 15px
+
 }
 
 .characterLoadMore {
-  justify-self: center;
+  padding: 5px;
+margin: 0 auto;
 }

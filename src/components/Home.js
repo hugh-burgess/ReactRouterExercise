@@ -1,13 +1,13 @@
-import homepagePicture from "../images/homepagePicture.jpg";
+import HomePagePic from "../images/HomePagePic.jpg";
 
 export default function Home() {
   return (
     <div>
-      <h1>Harry Potter API</h1>
-      <p>Welcome to the Harry Potter API!</p>
+      <h1>Star Wars API</h1>
+      <p>Welcome to the Star Wars API!</p>
       <img
         className="homeImage"
-        src={homepagePicture}
+        src={HomePagePic}
         alt="Harry Potter Logo"
       />
       <p>Deployed by Hugh during the neuefishe bootcamp.</p>

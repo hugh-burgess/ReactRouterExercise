@@ -36,8 +36,16 @@ code {
   grid-column: width;
   grid-row: main;
 }
+
+.charactersPage {
+  display:flex;
+    flex-wrap: wrap;
+
+}
+
 .footer {
   grid-column: width;
   grid-row: footer;
   font-size: 14px;
 }
+

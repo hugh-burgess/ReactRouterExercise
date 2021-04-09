@@ -16,16 +16,11 @@ function App() {
         </header>
         <main className="main">
           <Switch>
-            <Route path="/characters">
-              <Characters />
-            </Route>
-
-            <Route path="/characters/:characterLink">
-              <SingleCharacter />
-            </Route>
-
-            <Route exact path="/">
-              <Home />
+            <Route path="/characters/:id" component={SingleCharacter}/>
+            <Route path="/characters" component={Characters}/>
+            <Route exact path="/" component={Home}/>
+            <Route path="*">
+              <h2>No match </h2>
             </Route>
           </Switch>
         </main>
