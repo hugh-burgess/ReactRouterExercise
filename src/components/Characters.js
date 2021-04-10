@@ -36,7 +36,7 @@ export default function Characters() {
           alt={name}
         />
         <h3 className="characterNameTitle">
-        <Link
+        <Link className="nameLink"
         to={`/characters/${id}`}>{name}</Link>
         </h3>
        </section>

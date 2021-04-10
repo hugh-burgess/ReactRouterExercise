@@ -22,7 +22,9 @@ export default function SingleCharacter() {
 
   const list2 = singlePerson.masters ?? []
   console.log(list2)
-  const mastersList = list2.map((item) => <li>{item}</li>)
+  // let mastersList = list2 === String ? (return <li>{item}<li>) 
+  let mastersList = list2.map((item) => <li>{item}</li>
+
 
   const list3 = singlePerson.apprentices ?? []
   console.log(list3)
@@ -62,7 +64,7 @@ export default function SingleCharacter() {
         {singlePerson.affiliations !== undefined && (
           <div className="boxParent">
             Affiliations:
-            <ul className="boxChild">{affilList}</ul>
+            <ul className="boxChild capitaliseText">{affilList}</ul>
           </div>
         )}
       </div>
@@ -70,17 +72,24 @@ export default function SingleCharacter() {
         {singlePerson.masters !== undefined && (
           <div className="boxParent">
             Masters:
-            <ul className="boxChild">{mastersList}</ul>
+            <ul className="boxChild capitaliseText">{mastersList}</ul>
           </div>
         )}
-      </div>
+      </div> 
+
       <div>
         {singlePerson.apprentices !== undefined && (
           <div className="boxParent">
             Apprentices:
-            <ul className="boxChild">{apprenticesList}</ul>
+            <ul className="boxChild capitaliseText">{apprenticesList}</ul>
           </div>
         )}
+      </div>
+      <br />
+      <div>
+        <a href={singlePerson.wiki} rel="noreferrer" target="_blank">
+          Wikipedia
+        </a>
       </div>
       <br />
       <button onClick={() => history.goBack()}> Back </button>

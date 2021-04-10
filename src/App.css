@@ -1,8 +1,8 @@
 .App {
-  max-height: 100vh;
+  height: 100%;
   place-items: center;
   display: grid;
   grid-template-rows: [header] 80px [main] auto [footer] 80px;
   grid-template-columns: [width] 100vw;
-  margin: 0 auto;
+  margin: 0;
 }
