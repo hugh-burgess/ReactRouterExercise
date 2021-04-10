@@ -1,6 +1,13 @@
+
+.charactersPage {
+  display:flex;
+    flex-wrap: wrap;
+}
+
 .characterList {
   display:flex;
   flex-wrap: wrap;
+justify-content: center;
 
 }
 
@@ -19,9 +26,8 @@
 
 .characterPicture {
   border: green;
-
-  width: 100%;
   border-radius: 15px;
+  height: 160px;
 }
 
 .characterNameTitle {
@@ -33,4 +39,14 @@
 .characterLoadMore {
   padding: 5px;
 margin: 0 auto;
+}
+
+.characterDead {
+  background: #D27D7D;
+}
+
+.characterAlive {
+  background: #A7EEC9;
+
+
 }

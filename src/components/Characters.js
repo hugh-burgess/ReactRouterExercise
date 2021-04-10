@@ -18,23 +18,23 @@ export default function Characters() {
       });
 
 
-    console.log(dataFromApi)
       });
 
   }, []);
   function renderCharacters() {
   return characters.filter((person) => person.id <= list).map((person) => {
-  const {id, name, image} = person;
-
+  const {id, name, image, died} = person;
  return (
 
 
-        <section key={name} class="characterCard">
+        <section key={image} className={`characterCard ${died === undefined ? "characterAlive" : "characterDead"}`}>
         <img
           className="characterPicture"
           src={image}
           alt={name}
         />
+
+
         <h3 className="characterNameTitle">
         <Link
         to={`/characters/${id}`}>{name}</Link>
