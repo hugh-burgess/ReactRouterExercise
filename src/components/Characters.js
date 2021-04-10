@@ -30,15 +30,10 @@ export default function Characters() {
 
 
         <section key={image} className={`characterCard ${died === undefined ? "characterAlive" : "characterDead"}`}>
-        <img
-          className="characterPicture"
-          src={(name === "Mon Mothma") ? Monmothma : (name === "San Hill") ? San_Hill : image}
-          alt={name}
-        />
-        <h3 className="characterNameTitle">
-        <Link className="nameLink"
-        to={`/characters/${id}`}>{name}</Link>
-        </h3>
+        <Link className="nameLink" to={`/characters/${id}`}>
+        <div className="characterNameTitle">{name}</div>
+        <img className="characterPicture" src={(name === "Mon Mothma") ? Monmothma : (name === "San Hill") ? San_Hill : image} alt={name}/>
+        </Link>
        </section>
     )
   })};
