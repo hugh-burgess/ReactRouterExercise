@@ -1,0 +1,90 @@
+.charactersPage {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.characterList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.characterCard {
+  border: black 1px solid;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  align-items: center;
+  text-align: center;
+  width: 35%;
+  border-radius: 15px;
+  margin: 10px;
+  box-shadow: inset 0px -13px 20px 0px rgba(0, 0, 0, 0.84);
+transform: scale(1);
+transition: transform 0.7s;
+}
+
+.characterCard:hover {
+transform: scale(1.05);
+}
+
+.characterPicture {
+  border: green;
+  border-radius: 15px;
+  width: 100%;
+}
+
+.characterNameTitle {
+  margin: 10px 0;
+  font-size: 15px;
+}
+
+.nameLink {
+text-decoration: none;
+}
+
+.characterLoadMore {
+  padding: 5px;
+  margin: 0 auto;
+}
+
+.characterDead {
+  background: #d27d7d;
+}
+
+.characterAlive {
+  background: #a7eec9;
+}
+
+@media only screen and (min-width: 380px) {
+  .characterList {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .characterCard {
+    border: black 1px solid;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: flex-start;
+    padding: 5px;
+    width: 20%;
+    height: auto;
+    border-radius: 15px;
+  }
+
+  .characterPicture {
+    border: green;
+    border-radius: 15px;
+    transform: scale(0.8);
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .characterNameTitle {
+    margin: 0;
+    font-size: 15px;
+  }
+}
