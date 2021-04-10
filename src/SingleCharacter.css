@@ -42,8 +42,6 @@
 .backButton {
   padding: 10px;
   width: auto;
-  justify-content: center;
-text-align: center;
-  height: 20px;
+  height: auto;
   border-radius: 5px;
 }
