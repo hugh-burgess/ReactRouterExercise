@@ -17,17 +17,35 @@ export default function SingleCharacter() {
       })
   }, [id])
 
-  const list = singlePerson.affiliations ?? []
-  console.log(list)
-  const affilList = Array.isArray(list) ? list.map((item) => <li>{item}</li>) : <li>{list}</li>
+  const list1 = singlePerson.affiliations ?? []
+  console.log(list1)
+  const affilList = Array.isArray(list1) ? (
+    list1.map((item) => <li>{item}</li>)
+  ) : Array.isArray(list1) === false ? (
+    <li>{list1}</li>
+  ) : (
+    <li></li>
+  )
 
   const list2 = singlePerson.masters ?? []
   console.log(list2)
-  const mastersList = Array.isArray(list2) ? list2.map((item) => <li>{item}</li>) : <li>{list2}</li>
+  const mastersList = Array.isArray(list2) ? (
+    list2.map((item) => <li>{item}</li>)
+  ) : Array.isArray(list2) === false ? (
+    <li>{list2}</li>
+  ) : (
+    <li></li>
+  )
 
   const list3 = singlePerson.apprentices ?? []
   console.log(list3)
-  const apprenticesList = Array.isArray(list3) ? list3.map((item) => <li>{item}</li>) : <li>{list3}</li>
+  const apprenticesList = Array.isArray(list3) ? (
+    list3.map((item) => <li>{item}</li>)
+  ) : Array.isArray(list3) === false ? (
+    <li>{list3}</li>
+  ) : (
+    <li></li>
+  )
 
   return (
     <div
@@ -62,25 +80,30 @@ export default function SingleCharacter() {
       <div>
         {singlePerson.affiliations !== undefined && (
           <div className="boxParent">
-            Affiliations:
-            <ul className="boxChild capitaliseText">{affilList}</ul>
+            <div>Affiliations:</div>
+            <div className="boxChild capitaliseText">
+              <ul className="liParent">{affilList}</ul>
+            </div>
           </div>
         )}
       </div>
       <div>
         {singlePerson.masters !== undefined && (
           <div className="boxParent">
-            Masters:
-            <ul className="boxChild capitaliseText">{mastersList}</ul>
+            <div>Masters:</div>
+            <div className="boxChild capitaliseText">
+              <ul className="liParent">{mastersList}</ul>
+            </div>
           </div>
         )}
-      </div> 
-
+      </div>
       <div>
         {singlePerson.apprentices !== undefined && (
           <div className="boxParent">
-            Apprentices:
-            <ul className="boxChild capitaliseText">{apprenticesList}</ul>
+            <div>Apprentices:</div>
+            <div className="boxChild capitaliseText">
+              <ul className="liParent">{apprenticesList}</ul>
+            </div>
           </div>
         )}
       </div>
@@ -91,7 +114,10 @@ export default function SingleCharacter() {
         </a>
       </div>
       <br />
-      <button className="backButton" onClick={() => history.goBack()}> Back </button>
+      <button className="backButton" onClick={() => history.goBack()}>
+        {' '}
+        Back{' '}
+      </button>
     </div>
   )
 }

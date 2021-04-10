@@ -15,7 +15,7 @@
 
 .singlePicture {
   border: green;
-  border-radius: 15px;;
+  border-radius: 15px;
   width: 20vw;
 }
 
@@ -27,15 +27,20 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 .boxChild {
   border-radius: 15px;
   border: black 1px solid;
   text-align: left;
-
   padding: 10px 20px;
   width: 80%;
+  margin: 0;
+}
+
+.liParent {
+  padding: 0;
   margin: 0;
 }
 
@@ -44,4 +49,8 @@
   width: auto;
   height: auto;
   border-radius: 5px;
+}
+
+.hidden {
+  display: none;
 }
