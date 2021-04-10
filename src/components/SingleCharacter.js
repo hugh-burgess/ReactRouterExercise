@@ -16,19 +16,18 @@ export default function SingleCharacter() {
         setSinglePerson(dataFromApi)
       })
   }, [id])
+
   const list = singlePerson.affiliations ?? []
   console.log(list)
-  const affilList = list.map((item) => <li>{item}</li>)
+  const affilList = Array.isArray(list) ? list.map((item) => <li>{item}</li>) : <li>{list}</li>
 
   const list2 = singlePerson.masters ?? []
   console.log(list2)
-  // let mastersList = list2 === String ? (return <li>{item}<li>) 
-  let mastersList = list2.map((item) => <li>{item}</li>
-
+  const mastersList = Array.isArray(list2) ? list2.map((item) => <li>{item}</li>) : <li>{list2}</li>
 
   const list3 = singlePerson.apprentices ?? []
   console.log(list3)
-  const apprenticesList = list3.map((item) => <li>{item}</li>)
+  const apprenticesList = Array.isArray(list3) ? list3.map((item) => <li>{item}</li>) : <li>{list3}</li>
 
   return (
     <div
