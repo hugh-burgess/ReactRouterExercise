@@ -44,13 +44,33 @@
   margin: 0;
 }
 
+.backButtonParent {
+  position: relative;
+}
+
 .backButton {
   padding: 10px;
-  width: auto;
-  height: auto;
+  width: 100px;
+  height: 50px;
   border-radius: 5px;
+  background: #fdfdfd;
+  font-size: 90%;
 }
 
 .hidden {
   display: none;
+}
+
+@media only screen and (max-width: 690px) {
+  .backButton {
+    padding: 10px;
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    border-radius: 50px;
+    background: linear-gradient(145deg, #f0f0f0, #f15959);
+  }
 }
