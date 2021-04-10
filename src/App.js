@@ -1,5 +1,6 @@
 import "./App.css";
 import "./Character.css";
+import "./SingleCharacter.css";
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navigation from "./components/Navigation";
@@ -20,7 +21,7 @@ function App() {
             <Route path="/characters" component={Characters}/>
             <Route exact path="/" component={Home}/>
             <Route path="*">
-              <h2>No match </h2>
+              <h2>No match! Go Back 🤓 </h2>
             </Route>
           </Switch>
         </main>

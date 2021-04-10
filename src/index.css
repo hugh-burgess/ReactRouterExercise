@@ -40,6 +40,10 @@ align-self: center;
 
 }
 
+.homePage {
+  text-align: center;
+}
+
 .homeImage {
   width: 90vw;
   margin: 0 auto;

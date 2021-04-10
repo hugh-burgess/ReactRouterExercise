@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Monmothma from "../images/Monmothma.webp"
+import San_Hill from "../images/San_Hill.webp"
 
 export default function Characters() {
   const [characters, setCharacters] = useState([]);
@@ -30,11 +32,9 @@ export default function Characters() {
         <section key={image} className={`characterCard ${died === undefined ? "characterAlive" : "characterDead"}`}>
         <img
           className="characterPicture"
-          src={image}
+          src={(name === "Mon Mothma") ? Monmothma : (name === "San Hill") ? San_Hill : image}
           alt={name}
         />
-
-
         <h3 className="characterNameTitle">
         <Link
         to={`/characters/${id}`}>{name}</Link>

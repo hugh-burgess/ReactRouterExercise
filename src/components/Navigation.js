@@ -4,7 +4,7 @@ import logo from "../images/logo.svg";
 export default function Navigation() {
   return (
     <nav className="Navigation">
-      <img className="logoImage" src={logo} alt="star wars" />
+      <a href="https://github.com/akabab/starwars-api#alljson" rel="noreferrer" target="_blank"><img className="logoImage" src={logo} alt="star wars" /></a>
       <div className="navWrapper">
         <NavLink exact to="/">
           Home

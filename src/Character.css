@@ -18,21 +18,22 @@ justify-content: center;
   padding: 10px;
   align-items: center;
   text-align: center;
-  height: auto;
   width: 35%;
   border-radius: 15px;
-  margin: 10px
+  margin: 10px;
+box-shadow:  11px 11px 12px #bebebe,
+             -11px -11px 12px #ffffff;
 }
 
 .characterPicture {
   border: green;
   border-radius: 15px;
-  height: 160px;
+  width: 100%;
 }
 
 .characterNameTitle {
   margin: 10px 0;
-  font-size: 15px
+  font-size: 15px;
 
 }
 
@@ -48,5 +49,39 @@ margin: 0 auto;
 .characterAlive {
   background: #A7EEC9;
 
+
+}
+
+@media only screen and (min-width: 380px) {
+  .characterList {
+  display:flex;
+  flex-wrap: wrap;
+}
+  
+  .characterCard {
+  border: black 1px solid;
+  display: flex;
+    flex-direction: column;
+
+  justify-content: flex-start;
+  padding: 5px;
+  width: 20%;
+  height: auto;
+  border-radius: 15px;
+}
+
+.characterPicture {
+  border: green;
+  border-radius: 15px;
+  transform: scale(0.8);
+  padding: 0px;
+  margin: 0px;
+}
+
+.characterNameTitle {
+  margin: 0;
+  font-size: 15px;
+
+}
 
 }

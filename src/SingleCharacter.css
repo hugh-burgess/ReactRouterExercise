@@ -1,0 +1,40 @@
+.singleCard {
+  border: black 1px solid;
+  padding: 10px;
+  align-items: center;
+  text-align: center;
+  width: 80vw;
+  border-radius: 15px;
+  margin: 10px;
+  box-shadow: 11px 11px 12px #bebebe, -11px -11px 12px #ffffff;
+}
+
+.singleNameTitle {
+  margin: 10px 0;
+}
+
+.singlePicture {
+  border: green;
+  border-radius: 15px;
+  width: 50vw;
+}
+
+.capitaliseText {
+  text-transform: capitalize;
+}
+
+.boxParent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.boxChild {
+  border-radius: 15px;
+  border: black 1px solid;
+  text-align: left;
+
+  padding: 10px 20px;
+  width: 80%;
+  margin: 0;
+}
