@@ -17,35 +17,21 @@ export default function SingleCharacter() {
       })
   }, [id])
 
-  const list1 = singlePerson.affiliations ?? []
-  console.log(list1)
-  const affilList = Array.isArray(list1) ? (
-    list1.map((item) => <li>{item}</li>)
-  ) : Array.isArray(list1) === false ? (
-    <li>{list1}</li>
-  ) : (
-    <li></li>
-  )
+  const isAffArray = Array.isArray(singlePerson.affiliations) 
+  const affilList = (isAffArray && singlePerson.affiliations.length > 1) ? 
+  (singlePerson.affiliations.map((item) => <li>{item}</li>)) 
+  : <li>{singlePerson.affiliations}</li>
 
-  const list2 = singlePerson.masters ?? []
-  console.log(list2)
-  const mastersList = Array.isArray(list2) ? (
-    list2.map((item) => <li>{item}</li>)
-  ) : Array.isArray(list2) === false ? (
-    <li>{list2}</li>
-  ) : (
-    <li></li>
-  )
 
-  const list3 = singlePerson.apprentices ?? []
-  console.log(list3)
-  const apprenticesList = Array.isArray(list3) ? (
-    list3.map((item) => <li>{item}</li>)
-  ) : Array.isArray(list3) === false ? (
-    <li>{list3}</li>
-  ) : (
-    <li></li>
-  )
+const isMastArray = Array.isArray(singlePerson.masters) 
+  const mastersList = (isMastArray && singlePerson.masters.length > 1) ? 
+  (singlePerson.masters.map((item) => <li>{item}</li>)) 
+  : <li>{singlePerson.masters}</li>
+
+const isApprArray = Array.isArray(singlePerson.apprentices) 
+  const apprenticesList = (isApprArray && singlePerson.apprentices.length > 1) ? 
+  (singlePerson.apprentices.map((item) => <li>{item}</li>)) 
+  : <li>{singlePerson.apprentices}</li>
 
   return (
     <div
@@ -78,7 +64,7 @@ export default function SingleCharacter() {
       ---
       <br />
       <div>
-        {singlePerson.affiliations !== undefined && (
+        {affilList.length > 0 && (
           <div className="boxParent">
             <div>Affiliations:</div>
             <div className="boxChild capitaliseText">
@@ -88,7 +74,7 @@ export default function SingleCharacter() {
         )}
       </div>
       <div>
-        {singlePerson.masters !== undefined && (
+       { mastersList.length > 0 && (
           <div className="boxParent">
             <div>Masters:</div>
             <div className="boxChild capitaliseText">
@@ -98,7 +84,7 @@ export default function SingleCharacter() {
         )}
       </div>
       <div>
-        {singlePerson.apprentices !== undefined && (
+        {apprenticesList.length > 0 && (
           <div className="boxParent">
             <div>Apprentices:</div>
             <div className="boxChild capitaliseText">
