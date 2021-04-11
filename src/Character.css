@@ -1,7 +1,26 @@
 .charactersPage {
   display: flex;
   flex-wrap: wrap;
+}
 
+.filterOptions {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 100vw;
+  height: 20px;
+}
+
+.filterTitles {
+  font-size: 10px;
+  margin: 0;
+  padding: 3px;
+}
+
+.renderParent {
+  display: flex;
+  width: 100vw;
+  justify-content: center;
 }
 
 .characterList {
@@ -21,12 +40,12 @@
   border-radius: 15px;
   margin: 10px;
   box-shadow: inset 0px -13px 20px 0px rgba(0, 0, 0, 0.84);
-transform: scale(1);
-transition: transform 0.7s;
+  transform: scale(1);
+  transition: transform 0.3s;
 }
 
 .characterCard:hover {
-transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .characterPicture {
@@ -38,13 +57,17 @@ transform: scale(1.05);
 .characterNameTitle {
   margin: 10px 0;
   font-size: 20px;
-text-decoration: none;
-
+  text-decoration: none;
 }
 
 .nameLink {
-text-decoration: none;
-height: 100%;
+  text-decoration: none;
+  height: 100%;
+}
+
+.loadMoreButtonParent {
+  display: flex;
+  width: 100vw;
 }
 
 .characterLoadMore {
