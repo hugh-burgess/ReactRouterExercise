@@ -17,21 +17,29 @@ export default function SingleCharacter() {
       })
   }, [id])
 
-  const isAffArray = Array.isArray(singlePerson.affiliations) 
-  const affilList = (isAffArray && singlePerson.affiliations.length > 1) ? 
-  (singlePerson.affiliations.map((item) => <li>{item}</li>)) 
-  : <li>{singlePerson.affiliations}</li>
+  const isAffArray = Array.isArray(singlePerson.affiliations)
+  const affilList =
+    isAffArray && singlePerson.affiliations.length > 1 ? (
+      singlePerson.affiliations.map((item) => <li>{item}</li>)
+    ) : (
+      <li>{singlePerson.affiliations}</li>
+    )
 
+  const isMastArray = Array.isArray(singlePerson.masters)
+  const mastersList =
+    isMastArray && singlePerson.masters.length > 1 ? (
+      singlePerson.masters.map((item) => <li>{item}</li>)
+    ) : (
+      <li>{singlePerson.masters}</li>
+    )
 
-const isMastArray = Array.isArray(singlePerson.masters) 
-  const mastersList = (isMastArray && singlePerson.masters.length > 1) ? 
-  (singlePerson.masters.map((item) => <li>{item}</li>)) 
-  : <li>{singlePerson.masters}</li>
-
-const isApprArray = Array.isArray(singlePerson.apprentices) 
-  const apprenticesList = (isApprArray && singlePerson.apprentices.length > 1) ? 
-  (singlePerson.apprentices.map((item) => <li>{item}</li>)) 
-  : <li>{singlePerson.apprentices}</li>
+  const isApprArray = Array.isArray(singlePerson.apprentices)
+  const apprenticesList =
+    isApprArray && singlePerson.apprentices.length > 1 ? (
+      singlePerson.apprentices.map((item) => <li>{item}</li>)
+    ) : (
+      <li>{singlePerson.apprentices}</li>
+    )
 
   return (
     <div
@@ -47,8 +55,16 @@ const isApprArray = Array.isArray(singlePerson.apprentices)
       />
       <h2>Stats:</h2>
       <div className="capitaliseText">Species: {singlePerson.species} </div>
-      <div>Height: {singlePerson.height}m </div>
-      <div>Weight: {singlePerson.mass}kg </div>
+      <div>
+        {singlePerson.height === undefined
+          ? ''
+          : `Height: ${singlePerson.height}m`}{' '}
+      </div>
+      <div>
+        {singlePerson.mass === undefined
+          ? ''
+          : `Weight: ${singlePerson.mass}kg`}{' '}
+      </div>
       <div className="capitaliseText">Homeworld: {singlePerson.homeworld} </div>
       <div>
         {singlePerson.species === 'droid'
@@ -74,7 +90,7 @@ const isApprArray = Array.isArray(singlePerson.apprentices)
         )}
       </div>
       <div>
-       { mastersList.length > 0 && (
+        {mastersList.length > 0 && (
           <div className="boxParent">
             <div>Masters:</div>
             <div className="boxChild capitaliseText">

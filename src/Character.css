@@ -4,6 +4,8 @@
 }
 
 .filterOptions {
+  background-color: #ff0000;
+  padding-bottom: 5px;
   display: flex;
   justify-content: center;
   align-content: center;
@@ -49,7 +51,6 @@
 }
 
 .characterPicture {
-  border: green;
   border-radius: 15px;
   width: 100%;
 }
@@ -76,11 +77,11 @@
 }
 
 .characterDead {
-  background: #d27d7d;
+  background: #d44141d5;
 }
 
 .characterAlive {
-  background: #a7eec9;
+  background: #2fa568;
 }
 
 @media only screen and (min-width: 380px) {
@@ -113,4 +114,33 @@
     margin: 0;
     font-size: 15px;
   }
+}
+
+.topButtonParent {
+  position: relative;
+}
+.topButton {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  margin: 0;
+  padding: 0;
+  border-radius: 50px;
+  background: linear-gradient(145deg, #f0f0f0, #f15959);
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.topButtonIcon {
+  font-size: 20px;
+  padding: 5px;
+  transform: rotate(45deg);
+}
+
+.hide {
+  opacity: 0;
+}
+.show {
+  opacity: 1;
 }
