@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Monmothma from '../images/Monmothma.webp'
 import San_Hill from '../images/San_Hill.webp'
+import { GrTopCorner } from 'react-icons/gr'
 
 export default function Characters() {
   const [characters, setCharacters] = useState([])
@@ -98,6 +99,18 @@ export default function Characters() {
     }
   }
 
+  function myScrollFunc() {
+    const myID = document.getElementById('myID')
+    var y = window.scrollY
+    if (y >= 800) {
+      myID.className = 'topButton show'
+    } else {
+      myID.className = 'topButton hide'
+    }
+  }
+
+  window.addEventListener('scroll', myScrollFunc)
+
   return (
     <div className="charactersPage">
       <div className="filterOptions">
@@ -120,13 +133,21 @@ export default function Characters() {
           <option value="female">Female</option>
         </select>
       </div>
-<div className="renderParent">
-      <div className="characterList">{renderCharacters()}</div>
-</div>
+      <div className="renderParent">
+        <div className="characterList">{renderCharacters()}</div>
+      </div>
       <div className="loadMoreButtonParent">
         <button className="characterLoadMore" onClick={handleLoadMore}>
           Load more{' '}
         </button>
+      </div>
+
+      <div className="topButtonParent">
+        <a href="#top">
+          <button id="myID" className="topButton hide">
+            <GrTopCorner className="topButtonIcon" />
+          </button>
+        </a>
       </div>
     </div>
   )
