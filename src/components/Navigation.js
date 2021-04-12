@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom'
 import logo from '../images/logo.svg'
+import { WiStars } from 'react-icons/wi'
 
 export default function Navigation() {
   return (
@@ -8,9 +9,10 @@ export default function Navigation() {
         href="https://github.com/akabab/starwars-api#alljson"
         rel="noreferrer"
         target="_blank"
-       id="top"
+        id="top"
       >
         <img className="logoImage" src={logo} alt="star wars" />
+        <WiStars className="logoStars" />
       </a>
       <div className="navWrapper">
         <NavLink exact to="/">
