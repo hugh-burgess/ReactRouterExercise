@@ -8,7 +8,7 @@ export default function Navigation() {
         href="https://github.com/akabab/starwars-api#alljson"
         rel="noreferrer"
         target="_blank"
-        id="top"
+       id="top"
       >
         <img className="logoImage" src={logo} alt="star wars" />
       </a>
