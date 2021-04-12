@@ -101,8 +101,8 @@ export default function Characters() {
 
   function myScrollFunc() {
     const myID = document.getElementById('myID')
-    var y = window.scrollY
-    if (y >= 800) {
+    let y = window.scrollY
+    if (y >= 400) {
       myID.className = 'topButton show'
     } else {
       myID.className = 'topButton hide'

@@ -1,3 +1,5 @@
+import HomePagePic from '../images/HomePagePic.jpg'
+
 export default function Home() {
   return (
     <div className="homePage">
@@ -5,7 +7,7 @@ export default function Home() {
       <p>
         <em>Welcome to the Star Wars API!</em>
       </p>
-
+      <img className="homeImage" src={HomePagePic} alt="Star Wars Logo" />
       <p>
         {' '}
         Have a little look around! Click on your favourite character and see

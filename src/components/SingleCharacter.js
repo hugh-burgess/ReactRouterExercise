@@ -117,7 +117,11 @@ export default function SingleCharacter() {
       </div>
       <br />
       <div className="backButtonParent">
-        <button className="backButton" onClick={() => history.goBack()}>
+        <button
+          id="myID"
+          className="backButton"
+          onClick={() => history.goBack()}
+        >
           {' '}
           Back{' '}
         </button>

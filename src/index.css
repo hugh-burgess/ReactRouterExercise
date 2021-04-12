@@ -9,9 +9,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: url(/src/images/HomePagePic.jpg) white;
-  background-size: auto;
-  background-position-x: -400px;
 }
 
 code {
