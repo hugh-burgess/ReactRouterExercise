@@ -9,6 +9,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: black;
 }
 
 code {
@@ -37,7 +38,7 @@ code {
   width: 40px;
   margin: 5px;
   margin-top: 10px;
-text-decoration: none;
+  text-decoration: none;
   align-self: center;
   background-color: #a4c4c3;
   border-radius: 50%;
@@ -52,6 +53,10 @@ text-decoration: none;
 .homePage {
   text-align: center;
   margin: 0;
+}
+
+.whiteText {
+  color: white;
 }
 
 .homeImage {
