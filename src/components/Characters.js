@@ -32,7 +32,6 @@ export default function Characters() {
     event.preventDefault()
 
     const inputValue = event.target.value
-    console.log(inputValue)
     if (inputValue === 'male') {
       setSearch('male')
     } else if (inputValue === 'female') {
@@ -95,7 +94,6 @@ export default function Characters() {
   function handleLoadMore() {
     if (list < characters.length) {
       setList(list + 43)
-      console.log()
     }
   }
 
