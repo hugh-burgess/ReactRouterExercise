@@ -69,6 +69,8 @@ export default function SingleCharacter() {
       <div>
         {singlePerson.species === 'droid'
           ? `Created: In the year ${singlePerson.born}`
+          : singlePerson.born === undefined
+          ? ''
           : `Born: In the year ${singlePerson.born}`}{' '}
       </div>
       <div>
