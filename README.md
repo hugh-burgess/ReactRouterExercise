@@ -1,0 +1,3 @@
+# ReactRouterExercise - Star Wars API
+
+Welcome to my Star Wars API! Have a look about...
